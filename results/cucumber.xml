@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="15" time="1.315">
+    <testcase classname="PlateWarmer Capacity Management" name="Turn on plate warmer" time="0.187">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned off........................................passed
+When I turn on the plate warmer.............................................passed
+Then the plate warmer is ready for use......................................passed
+And the plate stack is empty................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Turn off empty plate warmer" time="0.018">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the plate warmer is empty...............................................passed
+When I turn off the plate warmer............................................passed
+Then the plate warmer is out of order.......................................passed
+And no plates can be added..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Turn off non empty plate warmer" time="0.017">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the plate warmer is not empty...........................................passed
+When I turn off the plate warmer............................................passed
+Then I receive a notice that the plate warmer is not empty..................passed
+And the plate warmer remains active.........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Turn off filled plate warmer" time="0.011">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the plate warmer is completely filled...................................passed
+When I turn off the plate warmer............................................passed
+Then I receive a notice that the plate warmer is not empty..................passed
+And the plate warmer remains active.........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Add plate" time="0.033">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 0 plates........................................passed
+When I add a plate..........................................................passed
+Then 1 plates are in the plate warmer.......................................passed
+And a Addition successful informs me if the addition was successful.........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Add plate 2" time="0.032">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 8 plates........................................passed
+When I add a plate..........................................................passed
+Then 9 plates are in the plate warmer.......................................passed
+And a Addition successful informs me if the addition was successful.........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Add plate 3" time="0.02">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 9 plates........................................passed
+When I add a plate..........................................................passed
+Then 10 plates are in the plate warmer......................................passed
+And a Addition successful informs me if the addition was successful.........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Add plate 4" time="0.02">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 10 plates.......................................passed
+When I add a plate..........................................................passed
+Then 10 plates are in the plate warmer......................................passed
+And a Addition unsuccessful informs me if the addition was successful.......passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Remove plate" time="0.036">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 0 plates........................................passed
+When I remove a plate from the plate warmer.................................passed
+Then 0 plates are in the plate warmer.......................................passed
+And a Remove unsuccessful informs me if the if the removement was successful.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Remove plate 2" time="0.015">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 1 plates........................................passed
+When I remove a plate from the plate warmer.................................passed
+Then 0 plates are in the plate warmer.......................................passed
+And a Remove successful informs me if the if the removement was successful..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Remove plate 3" time="0.065">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 2 plates........................................passed
+When I remove a plate from the plate warmer.................................passed
+Then 1 plates are in the plate warmer.......................................passed
+And a Remove successful informs me if the if the removement was successful..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Remove plate 4" time="0.029">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 10 plates.......................................passed
+When I remove a plate from the plate warmer.................................passed
+Then 9 plates are in the plate warmer.......................................passed
+And a Remove successful informs me if the if the removement was successful..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Visual inspection" time="0.061">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 0 plates........................................passed
+When I remove a plate to inspect it.........................................passed
+Then a Inspection not possible informs me if the visual inspection is possible.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Visual inspection 2" time="0.025">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 1 plates........................................passed
+When I remove a plate to inspect it.........................................passed
+Then a Inspection possible informs me if the visual inspection is possible..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="PlateWarmer Capacity Management" name="Visual inspection 3" time="0.041">
+        <system-out>
+            <![CDATA[Given the plate warmer is turned on.........................................passed
+And the maximum capacity of the plate warmer is 10..........................passed
+And in the plate warmer are 10 plates.......................................passed
+When I remove a plate to inspect it.........................................passed
+Then a Inspection possible informs me if the visual inspection is possible..passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

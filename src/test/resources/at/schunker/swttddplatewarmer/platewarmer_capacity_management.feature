@@ -16,7 +16,7 @@ Feature: PlateWarmer Capacity Management
 
   Scenario: Turn off non empty plate warmer
     Given the plate warmer is turned on
-    And the plate warmer is not empy
+    And the plate warmer is not empty
     When I turn off the plate warmer
     Then I receive a notice that the plate warmer is not empty
     And the plate warmer remains active
@@ -30,10 +30,10 @@ Feature: PlateWarmer Capacity Management
 
   Scenario Outline: Add plate
     Given the plate warmer is turned on
-    And the max capacity of the plate warmer is 10
-    And there are <CountOfPlates> plates in the plate warmer
+    And the maximum capacity of the plate warmer is 10
+    And in the plate warmer are <CountOfPlates> plates
     When I add a plate
-    Then there are <NewCountOfPlates> plates in the plate warmer
+    Then <NewCountOfPlates> plates are in the plate warmer
     And a <Notice> informs me if the addition was successful
     Examples:
     |CountOfPlates  |NewCountOfPlates |Notice |
@@ -44,10 +44,10 @@ Feature: PlateWarmer Capacity Management
 
   Scenario Outline: Remove plate
     Given the plate warmer is turned on
-    And the maximum capacity of plates is 10
-    And there are <CountOfPlates> plates in the plate warmer
+    And the maximum capacity of the plate warmer is 10
+    And in the plate warmer are <CountOfPlates> plates
     When I remove a plate from the plate warmer
-    Then there are <NewCountOfPlates> plates in the plate warmer
+    Then <NewCountOfPlates> plates are in the plate warmer
     And a <Notice> informs me if the if the removement was successful
     Examples:
     |CountOfPlates  |NewCountOfPlates |Notice |

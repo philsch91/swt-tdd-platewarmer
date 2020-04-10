@@ -1,0 +1,1342 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-04-10T18:41:32.550Z",
+        "line": 4,
+        "name": "Turn on plate warmer",
+        "description": "",
+        "id": "platewarmer-capacity-management;turn-on-plate-warmer",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7072000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the plate warmer is turned off",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOff()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5209000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I turn on the plate warmer",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.turnOnPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6318000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the plate warmer is ready for use",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.isPlateWarmerReadyForUse()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3647000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the plate stack is empty",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.isPlateStackEmpty()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:32.787Z",
+        "line": 10,
+        "name": "Turn off empty plate warmer",
+        "description": "",
+        "id": "platewarmer-capacity-management;turn-off-empty-plate-warmer",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1446000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1359000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the plate warmer is empty",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsEmpty()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1442000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I turn off the plate warmer",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.turnOffPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1273000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the plate warmer is out of order",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.isPlateWarmerOutOfOrder()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3368000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "no plates can be added",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.platesCannotBeAdded()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:32.831Z",
+        "line": 17,
+        "name": "Turn off non empty plate warmer",
+        "description": "",
+        "id": "platewarmer-capacity-management;turn-off-non-empty-plate-warmer",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2036000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1266000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the plate warmer is not empty",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsNotEmpty()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1142000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I turn off the plate warmer",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.turnOffPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1130000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I receive a notice that the plate warmer is not empty",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerNotEmptyMessage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1077000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the plate warmer remains active",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.isPlateWarmerActive()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:32.883Z",
+        "line": 24,
+        "name": "Turn off filled plate warmer",
+        "description": "",
+        "id": "platewarmer-capacity-management;turn-off-filled-plate-warmer",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1066000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1067000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the plate warmer is completely filled",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsFull()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2098000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I turn off the plate warmer",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.turnOffPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 956000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I receive a notice that the plate warmer is not empty",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerNotEmptyMessage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 908000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the plate warmer remains active",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.isPlateWarmerActive()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:32.915Z",
+        "line": 40,
+        "name": "Add plate",
+        "description": "",
+        "id": "platewarmer-capacity-management;add-plate;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1128000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4190000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1277000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "in the plate warmer are 0 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 981000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I add a plate",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.addPlateToPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1093000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "1 plates are in the plate warmer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 0
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.verifyPlateCount(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1064000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "a Addition successful informs me if the addition was successful",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Addition successful",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerAdditionSuccessfulMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:32.964Z",
+        "line": 41,
+        "name": "Add plate",
+        "description": "",
+        "id": "platewarmer-capacity-management;add-plate;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2046000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12927000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1832000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "in the plate warmer are 8 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1597000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I add a plate",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.addPlateToPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 996000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "9 plates are in the plate warmer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 0
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.verifyPlateCount(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 958000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "a Addition successful informs me if the addition was successful",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Addition successful",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerAdditionSuccessfulMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.030Z",
+        "line": 42,
+        "name": "Add plate",
+        "description": "",
+        "id": "platewarmer-capacity-management;add-plate;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1809000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3038000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1533000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "in the plate warmer are 9 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1091000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I add a plate",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.addPlateToPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1032000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "10 plates are in the plate warmer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 0
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.verifyPlateCount(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 986000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "a Addition successful informs me if the addition was successful",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Addition successful",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerAdditionSuccessfulMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.073Z",
+        "line": 43,
+        "name": "Add plate",
+        "description": "",
+        "id": "platewarmer-capacity-management;add-plate;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1137000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 963000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5335000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "in the plate warmer are 10 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1220000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I add a plate",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.addPlateToPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1063000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "10 plates are in the plate warmer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 0
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.verifyPlateCount(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 950000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "a Addition unsuccessful informs me if the addition was successful",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Addition unsuccessful",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerAdditionSuccessfulMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.106Z",
+        "line": 54,
+        "name": "Remove plate",
+        "description": "",
+        "id": "platewarmer-capacity-management;remove-plate;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1050000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3755000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1201000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "in the plate warmer are 0 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 940000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I remove a plate from the plate warmer",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.removePlateFromPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 924000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "0 plates are in the plate warmer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 0
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.verifyPlateCount(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 719000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "a Remove unsuccessful informs me if the if the removement was successful",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Remove unsuccessful",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerAdditionUnsuccessfulMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.164Z",
+        "line": 55,
+        "name": "Remove plate",
+        "description": "",
+        "id": "platewarmer-capacity-management;remove-plate;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2275000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 978000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 959000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "in the plate warmer are 1 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1117000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I remove a plate from the plate warmer",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.removePlateFromPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 982000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "0 plates are in the plate warmer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 0
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.verifyPlateCount(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1125000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "a Remove successful informs me if the if the removement was successful",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Remove successful",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerAdditionUnsuccessfulMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.213Z",
+        "line": 56,
+        "name": "Remove plate",
+        "description": "",
+        "id": "platewarmer-capacity-management;remove-plate;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5065000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2283000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1419000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "in the plate warmer are 2 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1423000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I remove a plate from the plate warmer",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.removePlateFromPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1781000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "1 plates are in the plate warmer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 0
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.verifyPlateCount(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17175000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "a Remove successful informs me if the if the removement was successful",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Remove successful",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerAdditionUnsuccessfulMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.296Z",
+        "line": 57,
+        "name": "Remove plate",
+        "description": "",
+        "id": "platewarmer-capacity-management;remove-plate;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 14681000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 819000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1511000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "in the plate warmer are 10 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 898000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I remove a plate from the plate warmer",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.removePlateFromPlateWarmer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1152000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "9 plates are in the plate warmer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 0
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.verifyPlateCount(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1125000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "a Remove successful informs me if the if the removement was successful",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Remove successful",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerAdditionUnsuccessfulMessage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.345Z",
+        "line": 67,
+        "name": "Visual inspection",
+        "description": "",
+        "id": "platewarmer-capacity-management;visual-inspection;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 992000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2298000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12908000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "in the plate warmer are 0 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2566000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "I remove a plate to inspect it",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.removePlateForInspection()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10770000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "a Inspection not possible informs me if the visual inspection is possible",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Inspection not possible",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerVisualInspectionPossible(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.428Z",
+        "line": 68,
+        "name": "Visual inspection",
+        "description": "",
+        "id": "platewarmer-capacity-management;visual-inspection;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10210000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 882000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 929000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "in the plate warmer are 1 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 846000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "I remove a plate to inspect it",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.removePlateForInspection()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1004000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "a Inspection possible informs me if the visual inspection is possible",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Inspection possible",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerVisualInspectionPossible(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-10T18:41:33.465Z",
+        "line": 69,
+        "name": "Visual inspection",
+        "description": "",
+        "id": "platewarmer-capacity-management;visual-inspection;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 873000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the plate warmer is turned on",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerIsTurnedOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 772000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "the maximum capacity of the plate warmer is 10",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerCapacity()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1166000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "in the plate warmer are 10 plates",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 24
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.setPlateWarmerPlates(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 840000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "I remove a plate to inspect it",
+            "match": {
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.removePlateForInspection()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1896000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "a Inspection possible informs me if the visual inspection is possible",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Inspection possible",
+                  "offset": 2
+                }
+              ],
+              "location": "at.schunker.swttddplatewarmer.StepDefinitions.plateWarmerVisualInspectionPossible(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "PlateWarmer Capacity Management",
+    "description": "  The capacity of the plates should managed correctly",
+    "id": "platewarmer-capacity-management",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/at/schunker/swttddplatewarmer/platewarmer_capacity_management.feature",
+    "tags": []
+  }
+]
